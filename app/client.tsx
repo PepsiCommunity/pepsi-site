@@ -10,6 +10,7 @@ import styles from '@/app/styles/main/layout.module.css';
 import Projects from './components/projects';
 import Skills from './components/skills';
 import Spotify from './components/spotify';
+import langs from '@/app/langs.json';
 
 interface Props {
     init_time: string;
@@ -28,6 +29,10 @@ const ClientHome = (props: Props) => {
             <Projects lang={lang} />
             <Skills lang={lang} />
             <Spotify lang={lang} />
+            <p
+                style={{ gridArea: 'footer', margin: 0, color: 'var(--text-color-2)', opacity: 0.5 }}
+                dangerouslySetInnerHTML={{ __html: langs.footer[lang === 'ru-RU' ? 'ru' : 'en'] }}
+            />
         </main>
     );
 };

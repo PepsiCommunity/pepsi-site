@@ -42,5 +42,9 @@
     "all_skills_description": {
         "ru": "Языки, фреймворки, утилиты с которыми мы работаем, и прочие классные штуки!",
         "en": "Languages, frameworks, utilities we work with, and other cool things!"
+    },
+    "footer": {
+        "ru": "Проект полностью <a href=\"https://github.com/PepsiCommunity/pepsi-site\">открытый</a>. Скачивание, копирование и редактирование разрешены.",
+        "en": "The project is completely <a href=\"https://github.com/PepsiCommunity/pepsi-site\">open</a>. Downloading, copying, and editing are allowed."
     }
 }

@@ -8,7 +8,8 @@
         "about about about about projects projects projects projects" 120px
         "about about about about skills skills skills skills" auto
         "spotify spotify spotify spotify skills skills skills skills" auto
-        "spotify spotify spotify spotify skills skills skills skills" auto;
+        "spotify spotify spotify spotify skills skills skills skills" auto
+        "footer footer footer footer footer footer footer footer" auto;
 
     grid-template-columns: repeat(8, 1fr);
 }
@@ -20,7 +21,8 @@
             "about about about about" auto
             "projects projects projects projects" auto
             "skills skills skills skills" auto
-            "spotify spotify spotify spotify" auto;
+            "spotify spotify spotify spotify" auto
+            "footer footer footer footer" auto;
 
         grid-template-columns: repeat(4, 1fr);
     }
@@ -34,7 +36,8 @@
             "about about" auto
             "projects projects" auto
             "skills skills" auto
-            "spotify spotify" auto;
+            "spotify spotify" auto
+            "footer footer" auto;
 
         grid-template-columns: repeat(2, 1fr);
     }

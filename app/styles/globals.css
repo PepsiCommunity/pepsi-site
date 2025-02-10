@@ -15,3 +15,8 @@ body {
 ::-webkit-scrollbar {
     display: none;
 }
+
+a {
+    text-decoration: underline;
+    color: inherit;
+}
