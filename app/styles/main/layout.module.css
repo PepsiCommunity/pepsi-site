@@ -1,0 +1,40 @@
+.main {
+    max-width: 85rem;
+
+    display: grid;
+    gap: 1.5rem;
+    grid-template:
+        "time date weather weather projects projects projects projects" 120px
+        "about about about about projects projects projects projects " 120px
+        "about about about about skills skills skills skills " auto
+        "spotify spotify spotify spotify skills skills skills skills " auto;
+
+    grid-template-columns: repeat(8, 1fr);
+}
+
+@media screen and (max-width: 1200px) {
+    .main {
+        grid-template:
+            "time date weather weather" 120px
+            "about about about about" auto
+            "projects projects projects projects" auto
+            "skills skills skills skills" auto
+            "spotify spotify spotify spotify" auto;
+
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .main {
+        grid-template:
+            "time date" 120px
+            "weather weather" 120px
+            "about about" auto
+            "projects projects" auto
+            "skills skills" auto
+            "spotify spotify" auto;
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

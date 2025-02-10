@@ -1,0 +1,16 @@
+body {
+    color: var(--text-color);
+    background-color: var(--background-color);
+    transition: background-color .25s, color .25s;
+    margin: 1rem 0 1rem 0;
+    padding: 0 1rem 0 1rem;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

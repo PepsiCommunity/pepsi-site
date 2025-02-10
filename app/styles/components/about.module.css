@@ -1,0 +1,127 @@
+.card {
+    padding: 2rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.avatar {
+    border-radius: 50%;
+}
+
+.tag_body {
+    border: var(--border-color) 2px solid;
+    border-radius: 999999px;
+    font-size: 14px;
+    padding: .375rem 1rem .375rem 1rem;
+    justify-content: center;
+
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    transition: background-color .15s, color .15s, border-color .15s;
+}
+
+.tags_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+}
+
+.title {
+    margin: 0;
+}
+
+.avatar_side {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.animated_name {
+    background: -webkit-linear-gradient(180deg, #7ebffe, #4895f2, #7ebffe);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: anim 2s infinite linear;
+    background-size: 200% 100%;
+
+    position: relative;
+}
+
+.beam {
+    position: absolute;
+    width: 96px;
+    aspect-ratio: 1;
+    background-color: #295488;
+    border-radius: 9999px;
+    filter: blur(60px);
+
+    transform: translateY(calc(-50% + 15px));
+    right: -5px;
+}
+
+@keyframes anim {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 200% 50%;
+    }
+}
+
+.button {
+    border: var(--border-color) 2px solid;
+    background-color: var(--buttons-color);
+    color: var(--text-color-2);
+    border-radius: .75rem;
+    font-size: 14px;
+    padding: .5rem 2rem .5rem 2rem;
+    justify-content: center;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    text-decoration: none;
+    transition: transform .8s cubic-bezier(.215, .61, .355, 1), background-color .15s, color .15s, border-color .15s;
+}
+
+.button span {
+    font-weight: 600;
+    font-size: 1rem;
+    user-select: none !important;
+}
+
+.button:hover {
+    transform: scale(.97);
+}
+
+.button:active {
+    transform: scale(.94);
+}
+
+.buttons_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.theme_icon {
+    transition: opacity .3s ease-out;
+}
+
+@media screen and (max-width: 600px) {
+    .buttons_container {
+        flex-direction: column;
+    }
+}

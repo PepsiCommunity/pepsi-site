@@ -1,0 +1,46 @@
+{
+    "title": {
+        "ru": "Привет! Мы",
+        "en": "Hello! We are"
+    },
+    "name": {
+        "ru": "ПЕПСИ",
+        "en": "PEPSI"
+    },
+    "about": {
+        "ru": "Мы создаем удобные, высокопроизводительные и безопасные решения, с бюджетом в банку пепси. А ещё мы не любим проприетарные сайты!",
+        "en": "We create convenient, high-performance and secure solutions with the budget of a can of Pepsi. And we also don't we love proprietary sites!"
+    },
+    "light_theme": {
+        "ru": "Светлая тема",
+        "en": "Light theme"
+    },
+    "dark_theme": {
+        "ru": "Темная тема",
+        "en": "Dark theme"
+    },
+    "projects_title": {
+        "ru": "Просмотреть все проекты",
+        "en": "View all projects"
+    },
+    "projects_description": {
+        "ru": "Завершенные, в разработке, замороженные проекты. Здесь все наши проекты, включая личные и сайты на заказ.",
+        "en": "Completed, in development, frozen projects. All our projects are here, including personal and custom websites."
+    },
+    "pl": {
+        "ru": "Языки программирования",
+        "en": "Programming languages"
+    },
+    "frameworks": {
+        "ru": "Фреймворки, планы, прочие навыки, etc.",
+        "en": "Frameworks, plans, other skills, etc."
+    },
+    "all_skills_title": {
+        "ru": "Просмотреть все навыки",
+        "en": "View all skills"
+    },
+    "all_skills_description": {
+        "ru": "Языки, фреймворки, утилиты с которыми мы работаем, и прочие классные штуки!",
+        "en": "Languages, frameworks, utilities we work with, and other cool things!"
+    }
+}

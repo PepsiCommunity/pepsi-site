@@ -1,0 +1,23 @@
+.body {
+    width: 100%;
+    height: 1.5rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 99999px;
+    background-color: var(--placeholder-color);
+    animation: fade infinite 2s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: .5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .5;
+    }
+}
