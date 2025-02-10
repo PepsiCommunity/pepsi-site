@@ -18,6 +18,7 @@
 
 .card_inner {
     text-decoration: none;
+    background-color: transparent;
 }
 
 .card_inner:hover {

@@ -5,10 +5,10 @@
     gap: 1.5rem;
     grid-template:
         "time date weather weather projects projects projects projects" 120px
-        "about about about about projects projects projects projects " 120px
-        "about about about about skills skills skills skills " auto
-        "spotify spotify spotify spotify skills skills skills skills " auto
-        "spotify spotify spotify spotify skills skills skills skills " auto;
+        "about about about about projects projects projects projects" 120px
+        "about about about about skills skills skills skills" auto
+        "spotify spotify spotify spotify skills skills skills skills" auto
+        "spotify spotify spotify spotify skills skills skills skills" auto;
 
     grid-template-columns: repeat(8, 1fr);
 }
