@@ -12,6 +12,7 @@
     "@tabler/icons-react": "^3.30.0",
     "axios": "^1.7.9",
     "cookies-next": "^5.1.0",
+    "framer-motion": "^12.4.2",
     "next": "15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

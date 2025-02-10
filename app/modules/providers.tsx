@@ -4,6 +4,7 @@ import { Onest } from 'next/font/google';
 import { CSSProperties } from 'react';
 import themes from '@/app/themes';
 import { useCookiesServer } from './CookiesProvider/CookieProvider';
+import { RootTransitionEffect } from './pageAnimations';
 
 const onest = Onest({ subsets: ['latin'] });
 
@@ -20,7 +21,9 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
 
     return (
         <html lang="en" style={theme as CSSProperties}>
-            <body className={`${onest.className}`}>{children}</body>
+            <body className={`${onest.className}`}>
+                <RootTransitionEffect>{children}</RootTransitionEffect>
+            </body>
         </html>
     );
 };
