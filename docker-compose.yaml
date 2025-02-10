@@ -1,0 +1,15 @@
+services:
+    pepsi_site:
+        container_name: pepsi_site
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        networks:
+            - nginx
+        command: npm run start
+        restart: unless-stopped
+
+networks:
+    nginx:
+        external: true
+        name: nginx
