@@ -51,7 +51,7 @@ const LanguageCard = ({ icon, name, state, href }: CardType) => {
                             height: '48px',
                             borderRadius: 99999,
                             filter: 'blur(60px)',
-                            transform: 'translate(calc(-50% + 2.5px), calc(-50% - 2.5px))',
+                            transform: 'translate(calc(-50% + 3px), calc(-50% - 3px))',
                             position: 'absolute',
                             backgroundColor: states[state].color
                         }}
