@@ -120,6 +120,13 @@
     transition: opacity .3s ease-out;
 }
 
+@media screen and (max-width: 1000px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .buttons_container {
         flex-direction: column;
