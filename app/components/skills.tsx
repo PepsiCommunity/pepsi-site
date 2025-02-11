@@ -100,7 +100,7 @@ const Skills = ({ lang }: { lang: string }) => {
             </div>
 
             <h1 className={`${styles_skills.pl} ${raleway.className}`}>{langs.frameworks[lang_code]}</h1>
-            <Link className={`${styles.card} ${styles_projects.card_inner}`} href="">
+            <Link className={`${styles.card} ${styles_projects.card_inner}`} href="/skills">
                 <h3 className={`${styles.header} ${styles_projects.header_inner} ${raleway.className}`}>
                     <IconList width={20} height={30} />
                     <span>{langs.all_skills_title[lang_code]}</span>

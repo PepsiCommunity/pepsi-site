@@ -18,7 +18,7 @@ const Projects = ({ lang }: { lang: string }) => {
                 <IconFoldersFilled width={16} height={24} />
                 <span>projects.json</span>
             </h3>
-            <Link className={`${styles.card} ${styles_projects.card_inner}`} href="">
+            <Link className={`${styles.card} ${styles_projects.card_inner}`} href="/projects">
                 <h3 className={`${styles.header} ${styles_projects.header_inner} ${raleway.className}`}>
                     <IconList width={20} height={30} />
                     <span>{langs.projects_title[lang_code]}</span>
