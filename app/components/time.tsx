@@ -5,14 +5,14 @@ import { IconBraces } from '@tabler/icons-react';
 import { useEffect, useState } from 'react';
 import { zedMono } from './fonts';
 import Placeholder from './placeholder';
-import { getTime } from '../modules/utils';
+import { getTime, validateLang } from '../modules/utils';
 
 const Time = ({ lang, init_time }: { lang: string; init_time: string }) => {
     const [time, setTime] = useState<string>(init_time);
 
     useEffect(() => {
-        setTime(getTime(lang));
-        const interval = setInterval(() => setTime(getTime(lang)), 1000);
+        setTime(getTime(validateLang(lang)));
+        const interval = setInterval(() => setTime(getTime(validateLang(lang))), 1000);
 
         return () => clearInterval(interval);
     }, [lang]);

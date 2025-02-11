@@ -11,6 +11,7 @@ import Projects from './components/projects';
 import Skills from './components/skills';
 import Spotify from './components/spotify';
 import langs from '@/app/langs.json';
+import { validateLang } from './modules/utils';
 
 interface Props {
     init_time: string;
@@ -18,7 +19,7 @@ interface Props {
 }
 
 const ClientHome = (props: Props) => {
-    const [lang, setLang] = useState<string>(useCookie('lang') ?? 'ru-RU');
+    const [lang, setLang] = useState<string>(validateLang(useCookie('lang')));
 
     return (
         <main className={styles.main}>

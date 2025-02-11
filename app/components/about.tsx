@@ -56,7 +56,7 @@ const Tag = ({ name, icon }: { name: string; icon: string }) => {
 };
 
 const changeLang = () => {
-    const new_lang = getCookie('lang') === 'ru-RU' ? 'en-US' : 'ru-RU';
+    const new_lang = getCookie('lang') === 'ru-RU' || !getCookie('lang') ? 'en-US' : 'ru-RU';
     setCookie('lang', new_lang, { maxAge: 60 * 24 * 365 * 10 });
     return new_lang;
 };

@@ -31,3 +31,8 @@ export const getTime = (lang: string): string => {
         timeZone: 'Etc/GMT-3'
     });
 };
+
+export const validateLang = (inp?: string) => {
+    if (!inp) return 'ru-RU';
+    return ['ru-RU', 'en-US'].includes(inp) ? inp : 'ru-RU'
+}
