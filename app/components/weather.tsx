@@ -10,7 +10,6 @@ import Placeholder from './placeholder';
 type WeatherType = {
     temp: number;
     condition: string;
-    icon: '04';
 };
 
 const Weather = ({ lang }: { lang: string }) => {
