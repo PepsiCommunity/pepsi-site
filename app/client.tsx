@@ -30,7 +30,7 @@ const ClientHome = (props: Props) => {
         }
 
         if (!getCookie('lang')) {
-            const systemLang = navigator.language.toLocaleLowerCase() === 'ru-ru' ? 'ru-RU' : 'en-US';
+            const systemLang = navigator.language.toLowerCase().startsWith('ru') ? 'ru-RU' : 'en-US';
             setLang(systemLang);
             setCookie('lang', systemLang, { maxAge: 60 * 24 * 365 * 10 });
         }
