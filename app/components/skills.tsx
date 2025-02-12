@@ -3,7 +3,7 @@
 import styles from '@/app/styles/main/cards.module.css';
 import styles_projects from '@/app/styles/components/projects.module.css';
 import styles_skills from '@/app/styles/components/skills.module.css';
-import { IconBrandPython, IconBrandRust, IconBrandTypescript, IconList, IconMist, IconLetterC } from '@tabler/icons-react';
+import { IconBrandRust, IconBrandTypescript, IconList, IconMist, IconLetterC } from '@tabler/icons-react';
 import { zedMono } from './fonts';
 import Link from 'next/link';
 import langs from '@/app/langs.json';
