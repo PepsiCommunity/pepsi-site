@@ -3,7 +3,6 @@ import { JSX, useRef, useState } from 'react';
 import { setTheme } from '../modules/setTheme';
 import styles_about from '@/app/styles/components/about.module.css';
 import { IconMoon, IconSun } from '@tabler/icons-react';
-import { setCookie } from 'cookies-next';
 import { Raleway } from 'next/font/google';
 import langs from '@/app/langs.json';
 
@@ -26,7 +25,6 @@ export const ThemeSelector = ({ lang_code }: { lang_code: 'ru' | 'en' }) => {
     const themeChanged = (dark: boolean) => {
         if (timeoutRef.current) clearTimeout(timeoutRef.current);
         const theme_str = dark ? 'dark' : 'light';
-        setCookie('theme', theme_str, { maxAge: 60 * 24 * 365 * 10 });
         setDark(dark);
         setTheme(theme_str);
         setOpacity('0');

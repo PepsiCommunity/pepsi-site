@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import About from './components/about';
 import DateElement, { DateYearType } from './components/date';
 import Time from './components/time';
@@ -12,6 +12,8 @@ import Skills from './components/skills';
 import Spotify from './components/spotify';
 import langs from '@/app/langs.json';
 import { validateLang } from './modules/utils';
+import { getCookie, setCookie } from 'cookies-next';
+import { setTheme } from './modules/setTheme';
 
 interface Props {
     init_time: string;
@@ -20,6 +22,19 @@ interface Props {
 
 const ClientHome = (props: Props) => {
     const [lang, setLang] = useState<string>(validateLang(useCookie('lang')));
+
+    useEffect(() => {
+        if (!getCookie('theme')) {
+            const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            setTheme(isDarkMode ? 'dark' : 'light');
+        }
+
+        if (!getCookie('lang')) {
+            const systemLang = navigator.language.toLocaleLowerCase() === 'ru-ru' ? 'ru-RU' : 'en-US';
+            setLang(systemLang);
+            setCookie('lang', systemLang, { maxAge: 60 * 24 * 365 * 10 });
+        }
+    }, []);
 
     return (
         <main className={styles.main}>
