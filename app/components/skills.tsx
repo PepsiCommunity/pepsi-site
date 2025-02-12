@@ -3,7 +3,7 @@
 import styles from '@/app/styles/main/cards.module.css';
 import styles_projects from '@/app/styles/components/projects.module.css';
 import styles_skills from '@/app/styles/components/skills.module.css';
-import { IconBrandPython, IconBrandRust, IconBrandTypescript, IconList, IconMist } from '@tabler/icons-react';
+import { IconBrandPython, IconBrandRust, IconBrandTypescript, IconList, IconMist, IconLetterC } from '@tabler/icons-react';
 import { zedMono } from './fonts';
 import Link from 'next/link';
 import langs from '@/app/langs.json';
@@ -80,10 +80,10 @@ const Skills = ({ lang }: { lang: string }) => {
             href: 'https://www.rust-lang.org'
         },
         {
-            icon: <IconBrandPython width={20} height={30} />,
-            name: 'Python',
+            icon: <IconLetterC width={20} height={30} />,
+            name: 'C-language',
             state: 'in_progress',
-            href: 'https://www.python.org'
+            href: 'https://en.wikipedia.org/wiki/C_(programming_language)'
         }
     ];
     return (
