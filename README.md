@@ -2,7 +2,7 @@
 
 Наш небольшой сайтик с информацией о нашем сообществе <3
 
-<img src="readme/main_page.png" alt="PPLLogo" style="width: 100%;" />
+<img src="readme/main_page.png" style="width: 100%;" />
 
 ## 🚀 Быстрый старт
 ### Docker
