@@ -70,42 +70,53 @@ const About = ({ lang, langChanged }: { lang: string; langChanged: (lang: string
             icon: 'ts'
         },
         {
-            name: 'Python',
-            icon: 'py'
-        },
-        {
             name: 'Rust',
             icon: 'rust'
         },
         {
             name: 'C-lang',
             icon: 'C'
+        },
+        {
+            name: 'Python',
+            icon: 'py'
         }
     ];
     return (
-        <div className={`${styles.card} ${styles_about.card}`} style={{ gridArea: 'about' }}>
-            <h3 className={`${styles.header} ${zedMono.className}`}>
-                <IconBook2 width={20} height={30} />
-                <span>about.md</span>
-            </h3>
-            <div className={styles_about.header}>
-                <Image src="/static/logo.png" alt="" width={80} height={80} className={styles_about.avatar} />
-                <div className={styles_about.avatar_side}>
-                    <p className={styles_about.title}>
-                        {langs.title[lang_code]}{' '}
-                        <span className={styles_about.animated_name}>
-                            {langs.name[lang_code]}
-                            <span className={styles_about.beam} />
-                        </span>
-                    </p>
-                    <div className={styles_about.tags_container}>
-                        {tags.map((tag, id) => (
-                            <Tag key={id} {...tag} />
-                        ))}
+        <div
+            className={`${styles.card} ${styles_about.card}`}
+            style={{ gridArea: 'about', justifyContent: 'space-between' }}
+        >
+            <div
+                style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '.75rem'
+                }}
+            >
+                <h3 className={`${styles.header} ${zedMono.className}`}>
+                    <IconBook2 width={20} height={30} />
+                    <span>about.md</span>
+                </h3>
+                <div className={styles_about.header}>
+                    <Image src="/static/logo.png" alt="" width={80} height={80} className={styles_about.avatar} />
+                    <div className={styles_about.avatar_side}>
+                        <p className={styles_about.title}>
+                            {langs.title[lang_code]}{' '}
+                            <span className={styles_about.animated_name}>
+                                {langs.name[lang_code]}
+                                <span className={styles_about.beam} />
+                            </span>
+                        </p>
+                        <div className={styles_about.tags_container}>
+                            {tags.map((tag, id) => (
+                                <Tag key={id} {...tag} />
+                            ))}
+                        </div>
                     </div>
                 </div>
+                <p>{about}</p>
             </div>
-            <p>{about}</p>
 
             <div className={styles_about.buttons_container}>
                 <Link href="https://github.com/PepsiCommunity" className={styles_about.button}>

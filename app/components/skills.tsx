@@ -87,7 +87,10 @@ const Skills = ({ lang }: { lang: string }) => {
         }
     ];
     return (
-        <div className={`${styles.card} ${styles_projects.card}`} style={{ gridArea: 'skills' }}>
+        <div
+            className={`${styles.card} ${styles_projects.card}`}
+            style={{ gridArea: 'skills', justifyContent: 'space-between' }}
+        >
             <h3 className={`${styles.header} ${zedMono.className}`}>
                 <IconMist width={16} height={24} />
                 <span>skills.md</span>

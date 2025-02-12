@@ -5,9 +5,10 @@
     gap: 1.5rem;
     grid-template:
         "time date weather weather projects projects projects projects" 120px
-        "about about about about projects projects projects projects" 120px
+        "about about about about projects projects projects projects" 100px
         "about about about about skills skills skills skills" auto
-        "spotify spotify spotify spotify skills skills skills skills" auto
+        "about about about about skills skills skills skills" auto
+        "about about about about skills skills skills skills" auto
         "spotify spotify spotify spotify skills skills skills skills" auto
         "footer footer footer footer footer footer footer footer" auto;
 
@@ -32,11 +33,11 @@
     .main {
         grid-template:
             "time date" 120px
-            "weather weather" 120px
             "about about" auto
+            "weather weather" 120px
+            "spotify spotify" auto
             "projects projects" auto
             "skills skills" auto
-            "spotify spotify" auto
             "footer footer" auto;
 
         grid-template-columns: repeat(2, 1fr);

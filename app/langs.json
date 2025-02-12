@@ -8,8 +8,8 @@
         "en": "PEPSI"
     },
     "about": {
-        "ru": "Мы создаем удобные, высокопроизводительные и безопасные решения, с бюджетом в банку пепси. А ещё мы не любим проприетарные сайты!",
-        "en": "We create convenient, high-performance and secure solutions with the budget of a can of Pepsi. We also don’t like proprietary sites!"
+        "ru": "Мы создаём удобные, высокопроизводительные и безопасные решения, с бюджетом в банку пепси. Мы любим открытый код, сарказм и бессонные ночи с попытками не сломать продакшен. Наши инструменты работают быстро, масштабируются (надеемся) и почти всегда совместимы. Если что-то пошло не так — это фича. Если всё идеально — скорее всего, ты смотришь не туда.",
+        "en": "We create user-friendly, high-performance, and secure solutions on a Pepsi-can budget. We love open-source, sarcasm, and sleepless nights trying not to break production. Our tools run fast, scale (we hope), and are almost always compatible. If something goes wrong—it's a feature. If everything is perfect—you’re probably looking in the wrong place."
     },
     "light_theme": {
         "ru": "Светлая тема",
