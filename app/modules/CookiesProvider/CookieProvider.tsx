@@ -21,7 +21,7 @@ export const CookiesContextProvider = ({
     children: ReactNode;
     value: { name: string; value: string }[];
 }) => {
-    const get = (name: string) => value.find((cookie) => cookie.name === name)?.value;
+    const get = (name: string) => value.find(cookie => cookie.name === name)?.value;
 
     return <CookiesContext.Provider value={{ get }}>{children}</CookiesContext.Provider>;
 };

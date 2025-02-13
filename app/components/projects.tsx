@@ -19,11 +19,15 @@ const Projects = ({ lang }: { lang: string }) => {
                 <span>projects.json</span>
             </h3>
             <Link className={`${styles.card} ${styles_projects.card_inner}`} href="/projects">
-                <h3 className={`${styles.header} ${styles_projects.header_inner} ${raleway.className}`}>
+                <h3
+                    className={`${styles.header} ${styles_projects.header_inner} ${raleway.className}`}
+                >
                     <IconList width={20} height={30} />
                     <span>{langs.projects_title[lang_code]}</span>
                 </h3>
-                <p className={`${styles_projects.contents}`}>{langs.projects_description[lang_code]}</p>
+                <p className={`${styles_projects.contents}`}>
+                    {langs.projects_description[lang_code]}
+                </p>
             </Link>
         </div>
     );

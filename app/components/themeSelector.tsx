@@ -39,7 +39,9 @@ export const ThemeSelector = ({ lang_code }: { lang_code: 'ru' | 'en' }) => {
             <div style={{ opacity }} className={styles_about.opacity_icon}>
                 {icon}
             </div>
-            <span className={raleway.className}>{langs[dark ? 'dark_theme' : 'light_theme'][lang_code]}</span>
+            <span className={raleway.className}>
+                {langs[dark ? 'dark_theme' : 'light_theme'][lang_code]}
+            </span>
         </button>
     );
 };

@@ -14,7 +14,10 @@ const DateElement = ({ lang, init_date }: { lang: string; init_date: DateYearTyp
 
     useEffect(() => {
         setDate(formatDateHuman(new Date(), lang));
-        const interval = setInterval(() => setDate(formatDateHuman(new Date(), lang)), 1000 * 60 * 5);
+        const interval = setInterval(
+            () => setDate(formatDateHuman(new Date(), lang)),
+            1000 * 60 * 5
+        );
 
         return () => clearInterval(interval);
     }, [lang]);
