@@ -22,10 +22,11 @@ import { ThemeSelector } from './themeSelector';
 
 const raleway = Raleway({ subsets: ['cyrillic', 'latin'] });
 
-const Tag = ({ name, icon }: { name: string; icon: string }) => {
+const Tag = ({ name, icon, icon_color }: { name: string; icon: string; icon_color: string }) => {
     const iconProps = {
         width: 16,
-        height: 24
+        height: 24,
+        color: icon_color
     };
 
     let IconEl = null;
@@ -67,19 +68,23 @@ const About = ({ lang, langChanged }: { lang: string; langChanged: (lang: string
     const tags = [
         {
             name: 'TypeScript',
-            icon: 'ts'
+            icon: 'ts',
+            icon_color: '#3178c6'
         },
         {
             name: 'Rust',
-            icon: 'rust'
+            icon: 'rust',
+            icon_color: '#f44f19'
         },
         {
             name: 'C-lang',
-            icon: 'C'
+            icon: 'C',
+            icon_color: '#6583b7'
         },
         {
             name: 'Python',
-            icon: 'py'
+            icon: 'py',
+            icon_color: '#ffc832'
         }
     ];
     return (

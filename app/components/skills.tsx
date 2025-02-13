@@ -3,7 +3,13 @@
 import styles from '@/app/styles/main/cards.module.css';
 import styles_projects from '@/app/styles/components/projects.module.css';
 import styles_skills from '@/app/styles/components/skills.module.css';
-import { IconBrandRust, IconBrandTypescript, IconList, IconMist, IconLetterC } from '@tabler/icons-react';
+import {
+    IconBrandRust,
+    IconBrandTypescript,
+    IconList,
+    IconMist,
+    IconLetterC
+} from '@tabler/icons-react';
 import { zedMono } from './fonts';
 import Link from 'next/link';
 import langs from '@/app/langs.json';
@@ -12,7 +18,12 @@ import { JSX } from 'react';
 
 const raleway = Raleway({ subsets: ['cyrillic', 'latin'] });
 
-type CardType = { icon: JSX.Element; name: string; state: 'active' | 'in_progress'; href: string };
+type CardType = {
+    icon: JSX.Element;
+    name: string;
+    state: 'active' | 'in_progress';
+    href: string;
+};
 const LanguageCard = ({ icon, name, state, href }: CardType) => {
     const states = {
         active: {
@@ -30,7 +41,10 @@ const LanguageCard = ({ icon, name, state, href }: CardType) => {
                 {icon}
                 {name}
             </h3>
-            <span className={`${styles_skills.state} ${zedMono.className}`} style={{ color: states[state].color }}>
+            <span
+                className={`${styles_skills.state} ${zedMono.className}`}
+                style={{ color: states[state].color }}
+            >
                 <div
                     style={{
                         position: 'relative'
@@ -68,19 +82,19 @@ const Skills = ({ lang }: { lang: string }) => {
 
     const languages: CardType[] = [
         {
-            icon: <IconBrandTypescript width={20} height={30} />,
+            icon: <IconBrandTypescript color="#3178c6" width={20} height={30} />,
             name: 'TypeScript',
             state: 'active',
             href: 'https://www.typescriptlang.org'
         },
         {
-            icon: <IconBrandRust width={20} height={30} />,
+            icon: <IconBrandRust color="#f44f19" width={20} height={30} />,
             name: 'Rust',
             state: 'in_progress',
             href: 'https://www.rust-lang.org'
         },
         {
-            icon: <IconLetterC width={20} height={30} />,
+            icon: <IconLetterC color="#6583b7" width={20} height={30} />,
             name: 'C-language',
             state: 'in_progress',
             href: 'https://en.wikipedia.org/wiki/C_(programming_language)'
@@ -102,13 +116,19 @@ const Skills = ({ lang }: { lang: string }) => {
                 ))}
             </div>
 
-            <h1 className={`${styles_skills.pl} ${raleway.className}`}>{langs.frameworks[lang_code]}</h1>
+            <h1 className={`${styles_skills.pl} ${raleway.className}`}>
+                {langs.frameworks[lang_code]}
+            </h1>
             <Link className={`${styles.card} ${styles_projects.card_inner}`} href="/skills">
-                <h3 className={`${styles.header} ${styles_projects.header_inner} ${raleway.className}`}>
+                <h3
+                    className={`${styles.header} ${styles_projects.header_inner} ${raleway.className}`}
+                >
                     <IconList width={20} height={30} />
                     <span>{langs.all_skills_title[lang_code]}</span>
                 </h3>
-                <p className={`${styles_projects.contents}`}>{langs.all_skills_description[lang_code]}</p>
+                <p className={`${styles_projects.contents}`}>
+                    {langs.all_skills_description[lang_code]}
+                </p>
             </Link>
         </div>
     );

@@ -24,7 +24,7 @@ const Weather = ({ lang }: { lang: string }) => {
                     language: lang === 'ru-RU' ? 'ru' : 'en'
                 }
             })
-            .then((weather) => {
+            .then(weather => {
                 setWeather(weather.data);
             });
     }, [lang]);

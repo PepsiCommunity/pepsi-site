@@ -30,7 +30,9 @@ const ClientHome = (props: Props) => {
         }
 
         if (!getCookie('lang')) {
-            const systemLang = navigator.language.toLowerCase().startsWith('ru') ? 'ru-RU' : 'en-US';
+            const systemLang = navigator.language.toLowerCase().startsWith('ru')
+                ? 'ru-RU'
+                : 'en-US';
             setLang(systemLang);
             setCookie('lang', systemLang, { maxAge: 60 * 24 * 365 * 10 });
         }
@@ -46,7 +48,12 @@ const ClientHome = (props: Props) => {
             <Skills lang={lang} />
             <Spotify lang={lang} />
             <p
-                style={{ gridArea: 'footer', margin: 0, color: 'var(--text-color-2)', opacity: 0.5 }}
+                style={{
+                    gridArea: 'footer',
+                    margin: 0,
+                    color: 'var(--text-color-2)',
+                    opacity: 0.5
+                }}
                 dangerouslySetInnerHTML={{ __html: langs.footer[lang === 'ru-RU' ? 'ru' : 'en'] }}
             />
         </main>
