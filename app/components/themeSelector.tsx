@@ -1,4 +1,4 @@
-import useCookie from '../modules/useCookie';
+import { useNextCookie } from 'use-next-cookie';
 import { JSX, useRef, useState } from 'react';
 import { setTheme } from '../modules/setTheme';
 import styles_about from '@/app/styles/components/about.module.css';
@@ -17,21 +17,21 @@ const getIcon = (dark: boolean) => {
 };
 
 export const ThemeSelector = ({ lang_code }: { lang_code: 'ru' | 'en' }) => {
-    const timeoutRef = useRef<NodeJS.Timeout>(null);
-    const [dark, setDark] = useState<boolean>((useCookie('theme') ?? 'dark') === 'dark');
-    const [opacity, setOpacity] = useState<string>('1');
+    const [dark, setDark] = useState<boolean>(useNextCookie('theme') !== 'light');
     const [icon, setIcon] = useState<JSX.Element>(getIcon(dark));
+    const [opacity, setOpacity] = useState<number>(1);
+    const timeoutRef = useRef<NodeJS.Timeout>(null);
 
     const themeChanged = (dark: boolean) => {
         if (timeoutRef.current) clearTimeout(timeoutRef.current);
         const theme_str = dark ? 'dark' : 'light';
         setDark(dark);
         setTheme(theme_str);
-        setOpacity('0');
+        setOpacity(0);
 
         timeoutRef.current = setTimeout(() => {
             setIcon(getIcon(dark));
-            setOpacity('1');
+            setOpacity(1);
         }, 300);
     };
     return (

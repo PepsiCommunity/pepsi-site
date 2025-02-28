@@ -5,7 +5,7 @@ import About from './components/about';
 import DateElement, { DateYearType } from './components/date';
 import Time from './components/time';
 import Weather from './components/weather';
-import useCookie from './modules/useCookie';
+import { useNextCookie } from 'use-next-cookie';
 import styles from '@/app/styles/main/layout.module.css';
 import Projects from './components/projects';
 import Skills from './components/skills';
@@ -21,7 +21,7 @@ interface Props {
 }
 
 const ClientHome = (props: Props) => {
-    const [lang, setLang] = useState<string>(validateLang(useCookie('lang')));
+    const [lang, setLang] = useState<string>(validateLang(useNextCookie('lang')));
 
     useEffect(() => {
         if (!getCookie('theme')) {

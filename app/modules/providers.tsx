@@ -3,7 +3,7 @@
 import { Onest } from 'next/font/google';
 import { CSSProperties } from 'react';
 import themes from '@/app/themes';
-import { useCookiesServer } from './CookiesProvider/CookieProvider';
+import { useCookiesServer } from 'use-next-cookie';
 import { RootTransitionEffect } from './pageAnimations';
 
 const onest = Onest({ subsets: ['latin'] });

@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import '@/app/styles/globals.css';
-import { CookieProvider } from './modules/CookiesProvider/CookiesComponent';
 import Providers from './modules/providers';
+import { CookieProvider } from 'use-next-cookie';
 
 export const metadata: Metadata = {
     title: 'PEPSI Community',

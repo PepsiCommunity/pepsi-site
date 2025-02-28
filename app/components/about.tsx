@@ -104,7 +104,13 @@ const About = ({ lang, langChanged }: { lang: string; langChanged: (lang: string
                     <span>about.md</span>
                 </h3>
                 <div className={styles_about.header}>
-                    <Image src="/static/logo.png" alt="" width={80} height={80} className={styles_about.avatar} />
+                    <Image
+                        src="/static/logo.png"
+                        alt=""
+                        width={80}
+                        height={80}
+                        className={styles_about.avatar}
+                    />
                     <div className={styles_about.avatar_side}>
                         <p className={styles_about.title}>
                             {langs.title[lang_code]}{' '}
