@@ -22,7 +22,7 @@ const DateElement = ({ lang, init_date }: { lang: string; init_date: DateYearTyp
         return () => clearInterval(interval);
     }, [lang]);
     return (
-        <div className={`${styles.card} ${styles.rect}`} style={{ gridArea: 'date' }}>
+        <div className={styles.card} style={{ gridArea: 'date' }}>
             <h3 className={`${styles.header} ${zedMono.className}`}>
                 <IconBraces width={16} height={24} />
                 <span>date.ts</span>

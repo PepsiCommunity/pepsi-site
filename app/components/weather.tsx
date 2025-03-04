@@ -30,7 +30,7 @@ const Weather = ({ lang }: { lang: string }) => {
     }, [lang]);
 
     return (
-        <div className={`${styles.card} ${styles.rect}`} style={{ gridArea: 'weather' }}>
+        <div className={styles.card} style={{ gridArea: 'weather' }}>
             <h3 className={`${styles.header} ${zedMono.className}`}>
                 <IconStackForward width={16} height={24} />
                 <span>weather.json</span>
