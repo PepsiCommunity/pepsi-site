@@ -36,7 +36,7 @@ const Weather = ({ lang }: { lang: string }) => {
                 <span>weather.json</span>
             </h3>
             <Placeholder value={weather}>
-                <p className={`${styles.contents} ${zedMono.className}`}>
+                <p className={`${zedMono.className} ${styles.contents}`}>
                     {weather?.condition}
                     <br />
                     <span style={{ opacity: '.6', fontSize: '14px' }}>{weather?.temp} °C</span>

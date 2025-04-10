@@ -46,7 +46,7 @@ const ClientHome = (props: Props) => {
             <About lang={lang} langChanged={setLang} />
             <Projects lang={lang} />
             <Skills lang={lang} />
-            <Spotify lang={lang} />
+            <Spotify />
             <p
                 style={{
                     gridArea: 'footer',

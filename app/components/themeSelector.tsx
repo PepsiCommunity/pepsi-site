@@ -34,6 +34,7 @@ export const ThemeSelector = ({ lang_code }: { lang_code: 'ru' | 'en' }) => {
             setOpacity(1);
         }, 300);
     };
+
     return (
         <button className={styles_about.button} onClick={() => themeChanged(!dark)}>
             <div style={{ opacity }} className={styles_about.opacity_icon}>
