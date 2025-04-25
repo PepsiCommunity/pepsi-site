@@ -17,11 +17,9 @@ const Weather = ({ lang }: { lang: string }) => {
 
     useEffect(() => {
         axios
-            .get(`https://weather.andcool.ru/api`, {
+            .get(`/api/weather`, {
                 params: {
-                    place: 'andcool',
-                    json: true,
-                    language: lang === 'ru-RU' ? 'ru' : 'en'
+                    lang: lang === 'ru-RU' ? 'ru' : 'en'
                 }
             })
             .then(weather => {
