@@ -1,6 +1,7 @@
 'use client';
 
-// BIG thanks to Oarer for this code snippet!
+// HUGE thanks to Oarer (GitHub: @oarer) for this code snippet!
+
 import { motion, AnimatePresence } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import { LayoutRouterContext } from 'next/dist/shared/lib/app-router-context.shared-runtime';

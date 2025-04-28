@@ -21,6 +21,6 @@ const themes: ThemeType = {
         '--placeholder-color': '#dbdbdb',
         '--buttons-color': '#f8f9f9'
     }
-}
+};
 
 export default themes;

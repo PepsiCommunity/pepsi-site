@@ -34,5 +34,5 @@ export const getTime = (lang: string): string => {
 
 export const validateLang = (inp?: string) => {
     if (!inp) return 'ru-RU';
-    return ['ru-RU', 'en-US'].includes(inp) ? inp : 'ru-RU'
-}
+    return ['ru-RU', 'en-US'].includes(inp) ? inp : 'ru-RU';
+};

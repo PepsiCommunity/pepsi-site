@@ -48,12 +48,7 @@ const ClientHome = (props: Props) => {
             <Skills lang={lang} />
             <Spotify />
             <p
-                style={{
-                    gridArea: 'footer',
-                    margin: 0,
-                    color: 'var(--text-color-2)',
-                    opacity: 0.5
-                }}
+                className={styles.footer}
                 dangerouslySetInnerHTML={{ __html: langs.footer[lang === 'ru-RU' ? 'ru' : 'en'] }}
             />
         </main>

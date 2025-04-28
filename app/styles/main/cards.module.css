@@ -8,7 +8,11 @@
     gap: .75rem;
     flex-direction: column;
 
-    transition: transform .8s cubic-bezier(.215, .61, .355, 1), background-color .15s, color .15s, border-color .15s;
+    transition:
+        transform .8s cubic-bezier(.215, .61, .355, 1),
+        background-color .15s,
+        color .15s,
+        border-color .15s;
 }
 
 .card:hover {
