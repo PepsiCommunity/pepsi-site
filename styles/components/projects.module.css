@@ -1,6 +1,7 @@
 .card {
     padding: 1.75rem;
     gap: 1.5rem;
+    justify-content: space-between;
 }
 
 .header_inner {

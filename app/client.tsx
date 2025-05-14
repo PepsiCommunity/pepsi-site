@@ -1,19 +1,19 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import About from './components/about';
-import DateElement, { DateYearType } from './components/date';
-import Time from './components/time';
-import Weather from './components/weather';
+import About from '@/components/about';
+import DateElement, { DateYearType } from '@/components/date';
+import Time from '@/components/time';
+import Weather from '@/components/weather';
 import { useNextCookie } from 'use-next-cookie';
-import styles from '@/app/styles/main/layout.module.css';
-import Projects from './components/projects';
-import Skills from './components/skills';
-import Spotify from './components/spotify';
+import styles from '@/styles/main/layout.module.css';
+import Projects from '@/components/projects';
+import Skills from '@/components/skills';
+import Spotify from '@/components/spotify';
 import langs from '@/app/langs.json';
-import { validateLang } from './modules/utils';
+import { validateLang } from '@/modules/utils';
 import { getCookie, setCookie } from 'cookies-next';
-import { setTheme } from './modules/setTheme';
+import { setTheme } from '@/modules/setTheme';
 
 interface Props {
     init_time: string;

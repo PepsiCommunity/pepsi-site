@@ -1,11 +1,11 @@
 'use client';
 
-import styles from '@/app/styles/main/cards.module.css';
-import styles_projects from '@/app/styles/components/projects.module.css';
-import styles_spotify from '@/app/styles/components/spotify.module.css';
+import styles from '@/styles/main/cards.module.css';
+import styles_projects from '@/styles/components/projects.module.css';
+import styles_spotify from '@/styles/components/spotify.module.css';
+import placeholder_style from '@/styles/placeholder.module.css';
 import { IconStackForward } from '@tabler/icons-react';
 import { zedMono } from './fonts';
-import placeholder_style from '@/app/styles/placeholder.module.css';
 
 const Spotify = () => {
     return (

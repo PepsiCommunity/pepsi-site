@@ -1,5 +1,13 @@
+.about_texts {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
 .card {
     padding: 2rem;
+    grid-area: about;
+    justify-content: space-between;
 }
 
 .header {

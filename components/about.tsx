@@ -1,7 +1,7 @@
 'use client';
 
-import styles from '@/app/styles/main/cards.module.css';
-import styles_about from '@/app/styles/components/about.module.css';
+import styles from '@/styles/main/cards.module.css';
+import styles_about from '@/styles/components/about.module.css';
 import {
     IconBook2,
     IconBrandGithub,
@@ -88,17 +88,8 @@ const About = ({ lang, langChanged }: { lang: string; langChanged: (lang: string
         }
     ];
     return (
-        <div
-            className={`${styles.card} ${styles_about.card}`}
-            style={{ gridArea: 'about', justifyContent: 'space-between' }}
-        >
-            <div
-                style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: '.75rem'
-                }}
-            >
+        <div className={`${styles.card} ${styles_about.card}`}>
+            <div className={styles_about.about_texts}>
                 <h3 className={`${styles.header} ${zedMono.className}`}>
                     <IconBook2 width={20} height={30} />
                     <span>about.md</span>

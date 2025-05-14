@@ -1,16 +1,16 @@
 const months = [
-    { en: 'January', ru: 'января' },
-    { en: 'February', ru: 'февраля' },
-    { en: 'March', ru: 'марта' },
-    { en: 'April', ru: 'апреля' },
-    { en: 'May', ru: 'мая' },
-    { en: 'June', ru: 'июня' },
-    { en: 'July', ru: 'июля' },
-    { en: 'August', ru: 'августа' },
-    { en: 'September', ru: 'сентября' },
-    { en: 'October', ru: 'октября' },
-    { en: 'November', ru: 'ноября' },
-    { en: 'December', ru: 'декабря' }
+    { en: 'January', ru: 'Января' },
+    { en: 'February', ru: 'Февраля' },
+    { en: 'March', ru: 'Марта' },
+    { en: 'April', ru: 'Апреля' },
+    { en: 'May', ru: 'Мая' },
+    { en: 'June', ru: 'Июня' },
+    { en: 'July', ru: 'Июля' },
+    { en: 'August', ru: 'Августа' },
+    { en: 'September', ru: 'Сентября' },
+    { en: 'October', ru: 'Октября' },
+    { en: 'November', ru: 'Ноября' },
+    { en: 'December', ru: 'Декабря' }
 ];
 
 export const formatDateHuman = (date: Date, lang: string) => {

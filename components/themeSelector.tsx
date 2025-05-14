@@ -1,7 +1,7 @@
 import { useNextCookie } from 'use-next-cookie';
 import { JSX, useRef, useState } from 'react';
 import { setTheme } from '../modules/setTheme';
-import styles_about from '@/app/styles/components/about.module.css';
+import styles_about from '@/styles/components/about.module.css';
 import { IconMoon, IconSun } from '@tabler/icons-react';
 import { Raleway } from 'next/font/google';
 import langs from '@/app/langs.json';

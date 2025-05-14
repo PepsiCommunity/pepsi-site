@@ -1,6 +1,6 @@
 'use client';
 
-import styles from '@/app/styles/main/cards.module.css';
+import styles from '@/styles/main/cards.module.css';
 import { IconBraces } from '@tabler/icons-react';
 import { useEffect, useState } from 'react';
 import { zedMono } from './fonts';

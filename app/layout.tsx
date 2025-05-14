@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next';
-import '@/app/styles/globals.css';
-import Providers from './modules/providers';
+import '@/styles/globals.css';
+import Providers from '@/modules/providers';
 import { CookieProvider } from 'use-next-cookie';
 
 export const metadata: Metadata = {
@@ -43,4 +43,3 @@ export default function RootLayout({
         </CookieProvider>
     );
 }
-

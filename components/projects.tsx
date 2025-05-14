@@ -1,7 +1,7 @@
 'use client';
 
-import styles from '@/app/styles/main/cards.module.css';
-import styles_projects from '@/app/styles/components/projects.module.css';
+import styles from '@/styles/main/cards.module.css';
+import styles_projects from '@/styles/components/projects.module.css';
 import { IconFoldersFilled, IconList } from '@tabler/icons-react';
 import { zedMono } from './fonts';
 import Link from 'next/link';

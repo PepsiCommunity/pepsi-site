@@ -1,3 +1,22 @@
+.dot_container {
+    position: relative;
+}
+
+.skills_dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 99999px;
+}
+
+.skills_shadow {
+    width: 48px;
+    height: 48px;
+    border-radius: 99999;
+    filter: blur(60px);
+    transform: translate(calc(-50% + 3px), calc(-50% - 3px));
+    position: absolute;
+}
+
 .pl {
     font-weight: 600;
     margin: 0;

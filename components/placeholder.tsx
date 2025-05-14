@@ -1,5 +1,5 @@
 import { JSX } from 'react';
-import style from '@/app/styles/placeholder.module.css';
+import style from '@/styles/placeholder.module.css';
 
 const Placeholder = ({ children, value }: { children: JSX.Element; value: unknown }) => {
     if (!!value) return children;

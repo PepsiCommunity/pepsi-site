@@ -1,8 +1,8 @@
 'use client';
 
-import styles from '@/app/styles/main/cards.module.css';
-import styles_projects from '@/app/styles/components/projects.module.css';
-import styles_skills from '@/app/styles/components/skills.module.css';
+import styles from '@/styles/main/cards.module.css';
+import styles_projects from '@/styles/components/projects.module.css';
+import styles_skills from '@/styles/components/skills.module.css';
 import {
     IconBrandRust,
     IconBrandTypescript,
@@ -45,30 +45,14 @@ const LanguageCard = ({ icon, name, state, href }: CardType) => {
                 className={`${styles_skills.state} ${zedMono.className}`}
                 style={{ color: states[state].color }}
             >
-                <div
-                    style={{
-                        position: 'relative'
-                    }}
-                >
+                <div className={styles_skills.dot_container}>
                     <div
-                        style={{
-                            width: '6px',
-                            height: '6px',
-                            borderRadius: 99999,
-                            backgroundColor: states[state].color
-                        }}
+                        className={styles_skills.skills_dot}
+                        style={{ backgroundColor: states[state].color }}
                     />
-
                     <div
-                        style={{
-                            width: '48px',
-                            height: '48px',
-                            borderRadius: 99999,
-                            filter: 'blur(60px)',
-                            transform: 'translate(calc(-50% + 3px), calc(-50% - 3px))',
-                            position: 'absolute',
-                            backgroundColor: states[state].color
-                        }}
+                        className={styles_skills.skills_shadow}
+                        style={{ backgroundColor: states[state].color }}
                     />
                 </div>
                 {states[state].title}
@@ -101,10 +85,7 @@ const Skills = ({ lang }: { lang: string }) => {
         }
     ];
     return (
-        <div
-            className={`${styles.card} ${styles_projects.card}`}
-            style={{ gridArea: 'skills', justifyContent: 'space-between' }}
-        >
+        <div className={`${styles.card} ${styles_projects.card}`} style={{ gridArea: 'skills' }}>
             <h3 className={`${styles.header} ${zedMono.className}`}>
                 <IconMist width={16} height={24} />
                 <span>skills.md</span>

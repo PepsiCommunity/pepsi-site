@@ -1,6 +1,6 @@
 import { cookies } from 'next/headers';
 import ClientHome from './client';
-import { formatDateHuman, getTime, validateLang } from './modules/utils';
+import { formatDateHuman, getTime, validateLang } from '@/modules/utils';
 
 const Home = async () => {
     const cookie = await cookies();
