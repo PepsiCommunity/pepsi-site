@@ -44,8 +44,8 @@
         "en": "Languages, frameworks, utilities we work with, and other cool things!"
     },
     "footer": {
-        "ru": "Это подвал. Тут у нас ссылка на наш гитхаб и {{members}}. <br/>Проект полностью <a href=\"https://github.com/PepsiCommunity/pepsi-site\">открытый</a>. Скачивание, копирование и редактирование разрешены.",
-        "en": "This is the footer. Here we have a link to our github and {{members}}. <br/>The project is completely <a href=\"https://github.com/PepsiCommunity/pepsi-site\">open</a>. Downloading, copying, and editing are allowed."
+        "ru": "Это подвал. Тут у нас {{members}} и ссылка на наш гитхаб. <br/>Проект полностью <a href=\"https://github.com/PepsiCommunity/pepsi-site\">открытый</a>. Скачивание, копирование и редактирование разрешены.",
+        "en": "This is the footer. Here we have {{members}} and a link to our github. <br/>The project is completely <a href=\"https://github.com/PepsiCommunity/pepsi-site\">open</a>. Downloading, copying, and editing are allowed."
     },
     "footer_child_count": {
         "ru": [
