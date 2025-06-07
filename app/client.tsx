@@ -11,17 +11,24 @@ import Projects from '@/components/projects';
 import Skills from '@/components/skills';
 import Spotify from '@/components/spotify';
 import langs from '@/app/langs.json';
-import { validateLang } from '@/modules/utils';
+import { numbersTxt, validateLang } from '@/modules/utils';
 import { getCookie, setCookie } from 'cookies-next';
 import { setTheme } from '@/modules/setTheme';
 
 interface Props {
     init_time: string;
     init_date: DateYearType | null;
+    members_count: number;
 }
 
 const ClientHome = (props: Props) => {
     const [lang, setLang] = useState<string>(validateLang(useNextCookie('lang')));
+    const unified_lang = lang === 'ru-RU' ? 'ru' : 'en';
+
+    const footer_text = langs.footer[unified_lang].replace(
+        '{{members}}',
+        numbersTxt(props.members_count, langs.footer_child_count[unified_lang])
+    );
 
     useEffect(() => {
         if (!getCookie('theme')) {
@@ -47,10 +54,7 @@ const ClientHome = (props: Props) => {
             <Projects lang={lang} />
             <Skills lang={lang} />
             <Spotify />
-            <p
-                className={styles.footer}
-                dangerouslySetInnerHTML={{ __html: langs.footer[lang === 'ru-RU' ? 'ru' : 'en'] }}
-            />
+            <p className={styles.footer} dangerouslySetInnerHTML={{ __html: footer_text }} />
         </main>
     );
 };
