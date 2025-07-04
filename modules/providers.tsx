@@ -21,7 +21,7 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
 
     return (
         <html lang="en" style={theme as CSSProperties}>
-            <body className={`${onest.className}`}>
+            <body className={onest.className}>
                 <RootTransitionEffect>{children}</RootTransitionEffect>
             </body>
         </html>
