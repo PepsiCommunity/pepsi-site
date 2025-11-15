@@ -1,6 +1,6 @@
 import { useNextCookie } from 'use-next-cookie';
 import { JSX, useRef, useState } from 'react';
-import { setTheme } from '../modules/setTheme';
+import { setTheme, toggleTheme } from '../modules/setTheme';
 import styles_about from '@/styles/components/about.module.css';
 import { IconMoon, IconSun } from '@tabler/icons-react';
 import { Raleway } from 'next/font/google';
@@ -21,12 +21,14 @@ export const ThemeSelector = ({ lang_code }: { lang_code: 'ru' | 'en' }) => {
     const [icon, setIcon] = useState<JSX.Element>(getIcon(dark));
     const [opacity, setOpacity] = useState<number>(1);
     const timeoutRef = useRef<NodeJS.Timeout>(null);
+    const iconRef = useRef<HTMLDivElement>(null);
 
     const themeChanged = (dark: boolean) => {
         if (timeoutRef.current) clearTimeout(timeoutRef.current);
         const theme_str = dark ? 'dark' : 'light';
         setDark(dark);
-        setTheme(theme_str);
+        const { top, left, width, height } = iconRef.current!.getBoundingClientRect();
+        toggleTheme(left + width / 2, top + height / 2, theme_str, setTheme);
         setOpacity(0);
 
         timeoutRef.current = setTimeout(() => {
@@ -37,7 +39,7 @@ export const ThemeSelector = ({ lang_code }: { lang_code: 'ru' | 'en' }) => {
 
     return (
         <button className={styles_about.button} onClick={() => themeChanged(!dark)}>
-            <div style={{ opacity }} className={styles_about.opacity_icon}>
+            <div style={{ opacity }} className={styles_about.opacity_icon} ref={iconRef}>
                 {icon}
             </div>
             <span className={raleway.className}>
